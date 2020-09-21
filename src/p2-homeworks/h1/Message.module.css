@@ -1,3 +1,59 @@
 .message {
-
+    width: 320px;
+    padding: 15px 30px;
+    display: flex;
+    align-items: flex-end;
 }
+
+.avatar{
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatar img{
+    width: 100%;
+    height: auto;
+}
+
+.wrapper{
+    border-radius: 12px;
+    background: #E6E6FA;
+    position: relative;
+    min-width: 300px;
+}
+
+.wrapper:before{
+    position: absolute;
+    content: "";
+    left: -6px;
+    bottom: 5px;
+    transform: scaleY(0.5) rotate(-138deg);
+    width: 30px;
+    height: 30px;
+    background: #E6E6FA;
+    z-index: 1;
+}
+
+.content{
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+
+
+.title{
+    font-weight: bold;
+    display: block;
+}
+
+.date{
+     position: absolute;
+     bottom: 5px;
+     right: 10px;
+    opacity: .5;
+ }
+
