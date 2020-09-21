@@ -8,6 +8,7 @@ type PropsMessage = {
     time: string
 }
 
+
 function Message(props: PropsMessage) {
     return (
         <div className={style.message}>
