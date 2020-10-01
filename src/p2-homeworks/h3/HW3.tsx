@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import GreetingContainer from "./GreetingContainer";
 import {v1} from "uuid";
+import s from "./Greeting.module.css";
 
 // types
 export type UserType = {
@@ -13,24 +14,23 @@ function HW3() {
 
 
 
-    const [users, setUsers] = useState<UserType>({_id: "", name: ""});
+    const [users, setUsers] = useState<Array<UserType>>([]);
 
     const addUserCallback = (name: string) => {
-        setUsers({_id: v1(), name: name});
+        let newUser:UserType = {_id: v1(), name: name};
+        setUsers([...users, newUser]);
     }
 
     return (
-        <div>
-            <hr/>
-            homeworks 3
+        <div className={s.hw3}>
+            <span className={s.hw3__title}>homeworks 3</span>
+
 
             {/*should work (должно работать)*/}
             <GreetingContainer users={users} addUserCallback={addUserCallback}/>
 
-            <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeGreeting/>*/}
-            <hr/>
         </div>
     );
 }

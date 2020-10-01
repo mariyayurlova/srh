@@ -1,9 +1,10 @@
 import React, {ChangeEvent, useState} from "react";
 import Greeting from "./Greeting";
 import {UserType} from "./HW3";
+import s from "./Greeting.module.css";
 
 type GreetingContainerPropsType = {
-    users: UserType
+    users: Array<UserType>
     addUserCallback: (name: string) => void
 }
 
@@ -22,6 +23,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
     const addUser = () => {
 
         if(name != ""){
+            addUserCallback(name)
             alert(`Hello  ${name}!`);
             setName("");
             setError("");
@@ -31,7 +33,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
         }
     };
 
-    const totalUsers = 0;
+    const totalUsers:number = users.length;
 
     return (
         <Greeting
