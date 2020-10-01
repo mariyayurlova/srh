@@ -1,3 +1,74 @@
-.someClass {
+.hw2 {
+    background: #4d244e;
+    padding-top: 30px;
+    height: calc(100vh - 83px);
+}
 
+.hw2__title{
+    color: #aa8e8d;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.affairs{
+    width: 300px;
+    height: 405px;
+    margin: 20px auto;
+    display: block;
+}
+
+.affairs__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.affairs__button{
+    border: none;
+    background: #f6bd66;
+    color: #aa8e8d;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.affair{
+    background: #ae5f75;
+    height: 69px;
+    width: 100%;
+    border-bottom: 1px solid #2C3E50;
+    transition: all 0.7s ease;
+    position: relative;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.affair__title{
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-indent: 20px;
+}
+
+.affair__remove{
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    display: block;
+    border-radius: 100%;
+    border: none;
+    color: #4d244e;
+    cursor: pointer;
 }

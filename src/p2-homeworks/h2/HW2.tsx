@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import Affairs from "./Affairs";
+import style from "./Affairs.module.css";
 
 
 // types
@@ -22,12 +23,12 @@ const defaultAffairs: Array<AffairType> = [
 ];
 
 // pure helper functions
-export const filterAffairs = (affairs: AffairType, filter: FilterType): AffairType => {
+export const filterAffairs = (affairs: Array<AffairType>, filter: FilterType): Array<AffairType> => {
     if (filter === "all") return affairs;
-    else return affairs.filter; // need to fix
+    else return affairs.filter((item) => item.priority === filter);
 }
-export const deleteAffair = (affairs: AffairType, _id: number): AffairType => {
-    return; // need to fix
+export const deleteAffair = (affairs: Array<AffairType>, _id: number): Array<AffairType> => {
+    return affairs.filter((item) => item._id != _id);
 }
 
 function HW2() {
@@ -38,9 +39,8 @@ function HW2() {
     const deleteAffairCallback = (_id: number) => setAffairs(deleteAffair(affairs, _id));
 
     return (
-        <div>
-            <hr/>
-            homeworks 2
+        <div className={style.hw2}>
+            <span className={style.hw2__title}>homeworks 2</span>
 
             {/*should work (должно работать)*/}
             <Affairs
@@ -49,10 +49,8 @@ function HW2() {
                 deleteAffairCallback={deleteAffairCallback}
             />
 
-            <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeAffairs/>*/}
-            <hr/>
         </div>
     );
 }
