@@ -3,5 +3,12 @@
 }
 
 .spanClassName {
+    font-weight: bold;
+    margin-left: 10px;
+}
 
+.label {
+    align-items: center;
+    display: flex;
+    margin-top: 15px;
 }

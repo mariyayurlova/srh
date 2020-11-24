@@ -20,7 +20,6 @@ function HW1() {
 
     return (
         <div>
-            <hr/>
             homeworks 1
 
 
@@ -31,9 +30,7 @@ function HW1() {
                 time={messageData.time}
             />
 
-            <hr/>
             {/*<AlternativeMessage/>*/}
-            <hr/>
         </div>
     );
 }

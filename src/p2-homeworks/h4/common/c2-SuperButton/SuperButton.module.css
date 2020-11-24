@@ -1,7 +1,16 @@
 .default {
-
+    font-weight: bold;
+    width: 230px;
+    height: 45px;
+    padding: 6px 15px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 14px;
+    background: #4d244e;
+    margin-top: 20px;
 }
 
 .red {
-    background: red;
+    background: #EE9BA3;
 }

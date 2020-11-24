@@ -5,5 +5,23 @@
 .column {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.hw4 {
+    padding-top: 30px;
+    height: calc(100vh - 83px);
+}
+
+.hw4__title {
+    color: #aa8e8d;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }

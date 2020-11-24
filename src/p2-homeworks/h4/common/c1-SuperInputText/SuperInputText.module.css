@@ -1,12 +1,27 @@
+.input {
+    font-weight: bold;
+    width: 100%;
+    height: 35px;
+    padding: 6px 15px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: #F6F7F9;
+    color: #748194;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.errorInput {
+    border: 2px solid #EE9BA3;
+}
+
 .superInput {
 
 }
 
-.errorInput {
-    border: 3px solid lime;
-    background: red;
+.error {
+    color: #EE9BA3;
+    margin-top: 10px;
 }
 
-.error {
-    color: red;
-}
