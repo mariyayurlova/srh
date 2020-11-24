@@ -14,7 +14,7 @@ export function restoreState<T>(key: string, defaultState: T) {
 
 // ---------------------------------------------------------------------------------------------------------------
 // использование:
-type StateType = {
+export type StateType = {
     x: string
     y: number
 }
