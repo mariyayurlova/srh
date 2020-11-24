@@ -1,0 +1,39 @@
+.error {
+    background: #4d244e;
+    height: calc(100vh - 183px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title {
+    color: #aa8e8d;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.desc {
+    color: #fff;
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-indent: 20px;
+    display: block;
+    margin-top: 30px;
+}
+
+.image {
+    color: #fff;
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-indent: 20px;
+    display: block;
+    margin-top: 30px;
+}

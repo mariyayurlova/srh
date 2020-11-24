@@ -1,0 +1,92 @@
+.header {
+    width: 100%;
+    background: #aa8e8d;
+    padding: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.burger {
+    cursor: pointer;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.burger span {
+    width: 40px;
+    height: 2px;
+    background: #ffffff;
+    display: block;
+}
+
+.burger span:nth-child(1) {
+    transition: .5s all;
+    transform: rotate(0);
+}
+
+.burger span:nth-child(2) {
+    margin-top: 5px;
+}
+
+.burger span:nth-child(3) {
+    margin-top: 5px;
+    transition: .5s all;
+    transform: rotate(0);
+
+}
+
+.activeBurger span:nth-child(1) {
+    transform: rotate(45deg);
+    transition: .5s all;
+    margin-top: -7px;
+}
+
+.activeBurger span:nth-child(2) {
+    display: none;
+}
+
+.activeBurger span:nth-child(3) {
+    transform: rotate(-45deg);
+    transition: .5s all;
+    margin-top: -1px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 100vh;
+    top: 60px;
+    position: absolute;
+    background: #aa8e8d;
+    left: 0;
+    z-index: 3;
+    padding: 50px;
+    transform: translateX(-100%);
+    transition: .5s all;
+}
+
+.activeMenu {
+    transform: translateX(0);
+    transition: .5s all;
+}
+
+.menu a {
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 900;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-indent: 20px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.activeLink {
+    text-decoration: underline !important;
+}
