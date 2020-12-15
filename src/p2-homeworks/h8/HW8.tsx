@@ -27,7 +27,7 @@ function HW8() {
 
     return (
         <div className={styles.hw8}>
-            <span className={styles.hw8__title}>homeworks 7</span>
+            <span className={styles.hw8__title}>homeworks 8</span>
 
             <div className={styles.wrapper}>
 
