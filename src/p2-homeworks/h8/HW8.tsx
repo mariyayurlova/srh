@@ -1,6 +1,7 @@
 import React, {useState} from "react";
-import {homeWorkReducer} from "./bll/homeWorkReducer";
+import {homeWorkReducer, SortPeopleAC, SortPeopleByAgeAC} from "./bll/homeWorkReducer";
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
+import styles from './HW8.module.css';
 
 const initialPeople = [
     {_id: 0, name: "Кот", age: 3},
@@ -15,30 +16,30 @@ function HW8() {
     const [people, setPeople] = useState(initialPeople);
 
     const finalPeople = people.map(p => (
-        <div key={p._id}>
-            some name, age
+        <div className={styles.peoples} key={p._id}>
+            <span>{p.name} : {p.age}</span>
         </div>
     ))
 
-    const sortUp = () => setPeople(homeWorkReducer(initialPeople, {type: "sort", payload: "up"}))
+    const sortUp = () => setPeople(homeWorkReducer(initialPeople, SortPeopleAC('up')))
+    const sortDown = () => setPeople(homeWorkReducer(initialPeople, SortPeopleAC('down')))
+    const sortByAge = () => setPeople(homeWorkReducer(initialPeople, SortPeopleByAgeAC()))
 
     return (
-        <div>
-            <hr/>
-            homeworks 8
+        <div className={styles.hw8}>
+            <span className={styles.hw8__title}>homeworks 7</span>
 
-            {/*should work (должно работать)*/}
+            <div className={styles.wrapper}>
 
-            {finalPeople}
-            <div><SuperButton onClick={sortUp}>sort up</SuperButton></div>
-            <div>sort down</div>
-
-            check 18
-
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativePeople/>*/}
-            <hr/>
+            <div className={styles.people}>
+                {finalPeople}
+            </div>
+            <div className={styles.buttons}>
+                <SuperButton onClick={sortUp}>sort up</SuperButton>
+                <SuperButton onClick={sortDown}>sort down</SuperButton>
+                <SuperButton onClick={sortByAge}>check 18</SuperButton>
+            </div>
+            </div>
         </div>
     );
 }
