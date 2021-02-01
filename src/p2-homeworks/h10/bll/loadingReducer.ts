@@ -1,5 +1,5 @@
 const initState = {
-
+    
 };
 
 export const loadingReducer = (state = initState, action: any): any => { // fix any
